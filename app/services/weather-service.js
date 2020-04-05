@@ -1,17 +1,34 @@
-import Weather from "../models/weather-model.js";
+import WeatherModel from "../models/weather-model.js";
 import store from "../store.js";
 
 // @ts-ignore
 const weatherApi = axios.create({
-  baseURL: "//bcw-sandbox.herokuapp.com/api/weather",
-  timeout: 3000
+  baseURL: "https://api.openweathermap.org/data/2.5/weather?q=Boise&appid=c047f61b0d88cabb172180596ca8fdec&units=imperial",
+  // timeout: 3000
 });
 
 class WeatherService {
-  async getWeather() {
+
+  constructor() {
+    this.getWeather();
+  }
+
+
+  // async 
+  getWeather() {
     console.log("Calling the Weatherman");
-    let res = await weatherApi.get();
-    store.commit("weather", new Weather(res.data));
+
+    weatherApi.get()
+      .then(res => {
+        console.log(res.data)
+        let rawDataObject = res.data
+        let weather = new WeatherModel(rawDataObject)
+        store.commit('weather', weather)
+      })
+    // let res = await weatherApi.get();
+    // store.commit("weather", new Weather(res.data));
+
+    .catch(err => console.error(err))
   }
 }
 
