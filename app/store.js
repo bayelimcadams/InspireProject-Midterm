@@ -1,10 +1,13 @@
 import Weather from "./models/weather-model.js";
+import Quote from "./models/quote-model.js";
 import Todo from "./models/todo-model.js";
 
 let _state = {
   /**@type {Weather} */
   weather: new Weather ({ name: '${this.name}', main: { temp: '${this.main.temp}'} }),
-  /**@type {Todo}*/
+  /**@type {Quote}*/
+  quotes: new Quote ({ response: { contents: { quotes: { quote: '${this.quote}', author: '${this.author}' } } } }),
+  /**type {Todo}*/
   todos: new Todo ({ item: '${this.item}',}),
 };
 
@@ -13,6 +16,7 @@ let _state = {
  */
 let _listeners = {
   weather: [],
+  quotes: [],
   todos: [],
 };
 

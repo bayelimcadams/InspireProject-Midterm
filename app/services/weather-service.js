@@ -2,9 +2,9 @@ import WeatherModel from "../models/weather-model.js";
 import store from "../store.js";
 
 // @ts-ignore
-const weatherApi = axios.create({
+const _weatherApi = axios.create({
   baseURL: "https://api.openweathermap.org/data/2.5/weather?q=Boise&appid=c047f61b0d88cabb172180596ca8fdec&units=imperial",
-  // timeout: 3000
+  timeout: 3000
 });
 
 class WeatherService {
@@ -18,7 +18,7 @@ class WeatherService {
   getWeather() {
     console.log("Calling the Weatherman");
 
-    weatherApi.get()
+    _weatherApi.get()
       .then(res => {
         console.log(res.data)
         let rawDataObject = res.data
