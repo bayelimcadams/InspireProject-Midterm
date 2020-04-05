@@ -1,17 +1,19 @@
-import Weather from "./models/weather.js";
+import Weather from "./models/weather-model.js";
+import Todo from "./models/todo-model.js";
 
 let _state = {
   /**@type {Weather} */
-  weather: new Weather({ name: "loading", main: { temp: 0.0 } }), //temporary fake data
-  /**@type {any[]}*/
-  todos: [] //TODO change 'any' to your todo model
+  weather: new Weather ({ name: '${this.name}', main: { temp: '${this.main.temp}'} }),
+  /**@type {Todo}*/
+  todos: new Todo ({ item: '${this.item}',}),
 };
 
 /** Collection of listeners to be called based on keyed state changes
  * @type {{[x:string]: function[]}}
  */
 let _listeners = {
-  weather: []
+  weather: [],
+  todos: [],
 };
 
 /**

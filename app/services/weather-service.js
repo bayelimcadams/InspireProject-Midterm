@@ -1,4 +1,4 @@
-import Weather from "../models/weather.js";
+import Weather from "../models/weather-model.js";
 import store from "../store.js";
 
 // @ts-ignore

@@ -1,4 +1,3 @@
-import _store
 
 // @ts-ignore
 const imgApi = axios.create({
@@ -9,11 +8,12 @@ const imgApi = axios.create({
 //TODO create methods to retrieve data trigger the update window when it is complete
 class ImageService {
 
-  async getPhoto() {
-    return await _photoApi.get().then(res => {
-      console.log("from sandbox photos", res);
-      store.commit("photo", res.data);
-      console.log("store photo", store.State.photo);
+  async getImage() {
+    return await imgApi.get().then(res => {
+      console.log("from sandbox images", res);
+
+  //     store.commit("photo", res.data);
+  //     console.log("store photo", store.State.photo);
 
     });
   }

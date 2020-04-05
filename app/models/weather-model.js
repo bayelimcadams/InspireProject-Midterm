@@ -1,4 +1,4 @@
-export default class Weather {
+export default class WeatherModel {
   constructor(data) {
     console.log('[RAW WEATHER API DATA]', data);
     //NOTE Have you ever wanted to know the temperature measured in kelvin? 
@@ -10,5 +10,13 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
+  }
+
+
+
+get WeatherTemplate() {
+  return `
+      
+      `
   }
 }
