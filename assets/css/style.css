@@ -12,27 +12,31 @@
   padding-right: 5px;
 }
 #middle-area {
-  padding-top: 12%;
-  padding-bottom: 12%;
+  padding-top: 8%;
+  padding-bottom: 8%;
 }
-/* #todo-error{
+#todo-error{
   color: red;
   font-size: 2em;
-} */
+}
 #todo-area {
   outline: solid black 1.8px;
   margin: auto;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   background-color: rgba(0, 0, 0, 0.473);
 }
 #todo-area h6 {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  outline: solid white 1px;
 }
-.btn {
-  margin-bottom: 5px;
+.create-btn {
+  margin-top: 15px;
 }
 .input {
+  margin-top: 20px;
   padding-left: 10px;
   background-color: powderblue;
 }
@@ -40,7 +44,6 @@
   margin:auto;
   color: whitesmoke;
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 

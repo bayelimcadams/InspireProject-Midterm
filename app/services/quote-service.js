@@ -3,7 +3,7 @@ import store from "../store.js";
 
 // @ts-ignore
 const _quoteApi = axios.create({
-  baseURL: "https://quotes.rest/qod?category=inspire&language=en",
+  baseURL: "https://bcw-sandbox.herokuapp.com/api/quotes",
   timeout: 3000
 });
 

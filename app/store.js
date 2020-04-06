@@ -6,9 +6,9 @@ let _state = {
   /**@type {Weather} */
   weather: new Weather ({ name: '${this.name}', main: { temp: '${this.main.temp}'} }),
   /**@type {Quote}*/
-  quotes: new Quote ({ quote: '${this.quote}', author: '${this.author}' } ),
+  quotes: new Quote ({ quote: { body: '${this.quote.body}', author: '${this.quote.author}' } } ),
   /**type {Task}*/
-  tasks: new Task ({ task: '${this.task}',}),
+  tasks: new Task ({ name: '${this.name}', id: '${this.id}'}),
 };
 
 /** Collection of listeners to be called based on keyed state changes

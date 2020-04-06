@@ -48,8 +48,8 @@
 
 
 	<div class="row">
-		<div id="middle-area" class="col-12 text-center">
-			<h1>Hello</h1>
+		<div id="middle-area" class="col-12 text-center text-white">
+			<h1>Good morning!</h1>
 		</div>
 	</div>
 
@@ -58,16 +58,22 @@
 		</div>
 
 		<div id="quote-area" class="col-6">
-			Quote hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee...
 		</div>
-		<!-- <div id="todo-error"></div>
-		<form onsubmit=""></form> -->
+
+
+
 		<div id="todo-area" class="col-3 text-white">
-			<h6>Todo</h6>
+
+										<div id="todo-error"></div>
+										<!-- <form onsubmit=""></form> -->
+			<h6 class="w-50 mx-auto">Todos</h6>
 			<div id="list-area">
 			</div>
-      <input class="input rounded type="text" id="input" placeholder="New task...">
-      <button class="btn btn-info btn-sm create-btn">Create</button>
+			<form onsubmit="app.taskController.addTask(event)">
+				<div class="form-group">
+						<label for="name"></label>
+      <input class="input rounded form-control" type="text" id="input" placeholder="New task..." required>
+      <button class="btn btn-info btn-sm create-btn" type="submit">Create</button>
 		</div>
 	</div>
 

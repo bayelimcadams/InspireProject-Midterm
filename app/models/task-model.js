@@ -3,7 +3,7 @@ export default class TaskModel {
   constructor(data) {
     console.log('[TASK DATA]', data);
 
-    this.task = data.task
+    this.name = data.name
     this.id = data.id || generateId();
   }
 
@@ -12,11 +12,12 @@ get TaskTemplate() {
   return `
       <ol>
         <li>
-        <input class="list-item-checkbox" type="checkbox">
-          ${this.task}<button type="button" class="close" onclick="app.taskController.deleteTask('${this.id}')">
-          <span>&times;</span>
+          <input class="list-item-checkbox" type="checkbox">
+          ${this.name}
+          <button type="button" class="close" onclick="app.taskController.deleteTask()"><span>&times;</span>
         </li>
       </ol>
   `
   }
+
 }
