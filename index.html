@@ -10,12 +10,21 @@
 	<title>Inspire Project - Midterm</title>
 </head>
 
+<style>
+	body {
+  background-image: url('app/mountain.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
 <body>
 
 <header class="container-fluid">
 
 	<div class="row">
-		<h1 id="header" class="col-12 bg-info text-white text-center">Inspire</h1>
+		<h1 id="header" class="col-12 text-white text-center">Inspire</h1>
 	</div>
 
 </header>
@@ -24,7 +33,7 @@
 
 	
 	<div class="row">
-		<div id="weather-area" class="col-12 text-right">
+		<div id="weather-area" class="col-12 text-right text-white">
 		</div>
 	</div>
 
@@ -44,18 +53,25 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row threesecrow text-center">
+		<div class="col-3">
+		</div>
+
+		<div id="quote-area" class="col-6">
+			Quote hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee...
+		</div>
 		<!-- <div id="todo-error"></div>
 		<form onsubmit=""></form> -->
-		<div id="todo-area" class="col-12 text-right">
-			Todo list here...
+		<div id="todo-area" class="col-3 text-white">
+			<h6>Todo</h6>
+			<div id="list-area">
+			</div>
+      <input class="input rounded type="text" id="input" placeholder="New task...">
+      <button class="btn btn-info btn-sm create-btn">Create</button>
 		</div>
 	</div>
 
-	<div class="row">
-		<div id="quote-area" class="col-12 text-center">
-		</div>
-	</div>
+
 
 
 </main>

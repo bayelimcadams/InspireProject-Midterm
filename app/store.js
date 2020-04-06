@@ -1,14 +1,14 @@
 import Weather from "./models/weather-model.js";
 import Quote from "./models/quote-model.js";
-import Todo from "./models/todo-model.js";
+import Task from "./models/task-model.js";
 
 let _state = {
   /**@type {Weather} */
   weather: new Weather ({ name: '${this.name}', main: { temp: '${this.main.temp}'} }),
   /**@type {Quote}*/
   quotes: new Quote ({ quote: '${this.quote}', author: '${this.author}' } ),
-  /**type {Todo}*/
-  todos: new Todo ({ item: '${this.item}',}),
+  /**type {Task}*/
+  tasks: new Task ({ task: '${this.task}',}),
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -17,7 +17,7 @@ let _state = {
 let _listeners = {
   weather: [],
   quotes: [],
-  todos: [],
+  tasks: [],
 };
 
 /**

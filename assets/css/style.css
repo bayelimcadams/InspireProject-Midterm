@@ -1,23 +1,48 @@
-#todo-error{
-  color: red;
-  font-size: 2em;
-}
 #header {
-  outline: solid black 1px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-decoration: underline black;
+  outline: solid black 1.8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.473);
+}
+#weather-area {
+  padding-top: 25px;
+  padding-right: 30px;
+}
+#weather-area h5 {
+  padding-right: 5px;
 }
 #middle-area {
-  padding-top: 13%;
-  padding-bottom: 13%;
+  padding-top: 12%;
+  padding-bottom: 12%;
 }
-/* main {
-  background-image: url('img_girl.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+/* #todo-error{
+  color: red;
+  font-size: 2em;
 } */
+#todo-area {
+  outline: solid black 1.8px;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.473);
+}
+#todo-area h6 {
+  padding-bottom: 15px;
+}
+.btn {
+  margin-bottom: 5px;
+}
+.input {
+  padding-left: 10px;
+  background-color: powderblue;
+}
+#quote-area {
+  margin:auto;
+  color: whitesmoke;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 
 /* .container {
   position: relative;

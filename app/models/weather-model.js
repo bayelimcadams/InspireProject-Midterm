@@ -10,7 +10,7 @@ export default class WeatherModel {
 get WeatherTemplate() {
   return `
       <h5>${this.name}</h5>
-      <p>${this.farenheit}</p>
+      <p>${this.farenheit}* F</p>
       `
   }
 }
