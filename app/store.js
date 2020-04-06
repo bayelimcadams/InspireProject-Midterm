@@ -6,7 +6,7 @@ let _state = {
   /**@type {Weather} */
   weather: new Weather ({ name: '${this.name}', main: { temp: '${this.main.temp}'} }),
   /**@type {Quote}*/
-  quotes: new Quote ({ response: { contents: { quotes: { quote: '${this.quote}', author: '${this.author}' } } } }),
+  quotes: new Quote ({ quote: '${this.quote}', author: '${this.author}' } ),
   /**type {Todo}*/
   todos: new Todo ({ item: '${this.item}',}),
 };

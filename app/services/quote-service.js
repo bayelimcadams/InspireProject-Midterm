@@ -23,15 +23,14 @@ class QuoteService {
       .then(res => {
         console.log(res.data)
         let rawDataObject = res.data
-        let quote = new QuoteModel(rawDataObject)
-        store.commit('quotes', quote)
+        let quotes = new QuoteModel(rawDataObject)
+        store.commit('quotes', quotes)
       })
     // let res = await quoteApi.get();
     // store.commit("quote", new Quote(res.data));
 
     .catch(err => console.error(err))
   }
-
 }
 
 const quoteService = new QuoteService();

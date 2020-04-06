@@ -7,7 +7,6 @@ export default class WeatherModel {
   }
 
 
-
 get WeatherTemplate() {
   return `
       <h5>${this.name}</h5>

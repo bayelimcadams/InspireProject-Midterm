@@ -5,6 +5,7 @@ import store from "../store.js";
 //		you may wish to check out the model and include some additional data.
 
 //TODO Complete rendering data to the screen
+
 function drawWeather() {
   document.getElementById('weather-area').innerHTML = store.State.weather.WeatherTemplate;
   console.log("THE WEATHER MAN SAYS:", store.State.weather);

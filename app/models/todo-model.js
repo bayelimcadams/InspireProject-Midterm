@@ -1,7 +1,7 @@
 export default class TodoModel {
   constructor(data) {
 
-    this.item = data.item;
+    this.task = data.task;
   }
 
 

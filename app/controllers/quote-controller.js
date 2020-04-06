@@ -9,12 +9,9 @@ function drawQuote() {
   console.log("THE QUOTE MAN SAYS:", store.State.quotes);
   event.preventDefault();
 }
-
 export default class QuoteController {
-
   constructor() {
     store.subscribe("quotes", drawQuote);
     QuoteService.getQuote();
   }
-
 }
