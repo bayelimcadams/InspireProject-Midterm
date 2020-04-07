@@ -9,7 +9,7 @@ import store from "../store.js";
 function drawWeather() {
   document.getElementById('weather-area').innerHTML = store.State.weather.WeatherTemplate;
   console.log("THE WEATHER MAN SAYS:", store.State.weather);
-  event.preventDefault();
+  // event.preventDefault();
 }
 export default class WeatherController {
   constructor() {

@@ -7,7 +7,7 @@ import store from "../store.js";
 function drawQuote() {
   document.getElementById('quote-area').innerHTML = store.State.quotes.QuoteTemplate;
   console.log("THE QUOTE MAN SAYS:", store.State.quotes);
-  event.preventDefault();
+  // event.preventDefault();
 }
 export default class QuoteController {
   constructor() {

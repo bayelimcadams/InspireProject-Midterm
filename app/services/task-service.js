@@ -8,30 +8,30 @@ const taskApi = axios.create({
 });
 
 
-let _state = {
-	todos: [],
-	error: {},
-}
-let _subscribers = {
-	todos: [],
-	error: []
-}
+// let _state = {
+// 	todos: [],
+// 	error: {},
+// }
+// let _subscribers = {
+// 	todos: [],
+// 	error: []
+// }
 
-function _setState(prop, data) {
-	_state[prop] = data
-	_subscribers[prop].forEach(fn => fn())
-}
+// function _setState(prop, data) {
+// 	_state[prop] = data
+// 	_subscribers[prop].forEach(fn => fn())
+// }
 
 
 class TaskService {
 
-  get TodoError() {
-		return _state.error
-	}
+  // get TodoError() {
+	// 	return _state.error
+	// }
 
-	addSubscriber(prop, fn) {
-		_subscribers[prop].push(fn)
-	}
+	// addSubscriber(prop, fn) {
+	// 	_subscribers[prop].push(fn)
+	// }
 
   getTasks() {
     console.log("Getting the Task List");
@@ -43,8 +43,8 @@ class TaskService {
 
   addTask(task) {
     console.log("Adding Task")
-
-    taskApi.post(task)
+    // debugger
+    taskApi.post("", task)
       .then(res => {
         console.log(res.data)
         let rawDataObject = res.data

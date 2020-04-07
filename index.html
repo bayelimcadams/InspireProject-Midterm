@@ -10,14 +10,14 @@
 	<title>Inspire Project - Midterm</title>
 </head>
 
-<style>
+<!-- <style>
 	body {
   background-image: url('app/mountain.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
 }
-</style>
+</style> -->
 
 <body>
 
@@ -29,7 +29,8 @@
 
 </header>
 
-<main id="bg-image" class="container-fluid">
+<main class="container-fluid">
+	<div id="image-area">
 
 	
 	<div class="row">
@@ -71,16 +72,16 @@
 			</div>
 			<form onsubmit="app.taskController.addTask(event)">
 				<div class="form-group">
-						<label for="name"></label>
-      <input class="input rounded form-control" type="text" id="input" placeholder="New task..." required>
+						<label for="description"></label>
+      <input name="taskInput" class="input rounded form-control" type="text" id="input" placeholder="New task..." required>
       <button class="btn btn-info btn-sm create-btn" type="submit">Create</button>
 		</div>
 	</div>
 
 
-
-
+	</div>
 </main>
+
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">

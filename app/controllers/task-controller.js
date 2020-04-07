@@ -3,14 +3,14 @@ import store from "../store.js";
 
 
 function _drawTasks() {
-
-  document.getElementById('list-area').innerHTML = store.State.tasks.TaskTemplate;
+  // TODO create for each task
+  // document.getElementById('list-area').innerHTML = store.State.tasks.TaskTemplate;
   console.log("THE TASK MAN SAYS:", store.State.tasks);
-  event.preventDefault();
+  // event.preventDefault();
 }
 
 function _drawError() {
-	console.error('[TASK ERROR]', TaskService.TodoError)
+	console.error('[TASK ERROR]')
 }
 
 
@@ -18,21 +18,23 @@ export default class TaskController {
   constructor() {
 
     store.subscribe("tasks", _drawTasks)
-    TaskService.addSubscriber('error', _drawError)
+    // TaskService.addSubscriber('error', _drawError)
     TaskService.getTasks()
   }
 
   addTask(event) {
     event.preventDefault();
     let formData = event.target;
+
     let task = {
 
       //TODO build the task object from the data that comes into this method
 
-      name: formData
+      description: formData.taskInput.value
     };
-    TaskService.addTask(task)
-    _drawTasks()
+      // debugger;
+      TaskService.addTask(task)
+    // _drawTasks()
     formData.reset()
   }
 

@@ -1,15 +1,18 @@
 import Weather from "./models/weather-model.js";
 import Quote from "./models/quote-model.js";
 import Task from "./models/task-model.js";
+import Image from "./models/image-model.js";
 
 let _state = {
   /**@type {Weather} */
   weather: new Weather ({ name: '${this.name}', main: { temp: '${this.main.temp}'} }),
   /**@type {Quote}*/
   quotes: new Quote ({ quote: { body: '${this.quote.body}', author: '${this.quote.author}' } } ),
-  /**type {Task}*/
-  tasks: new Task ({ name: '${this.name}', id: '${this.id}'}),
-};
+  /**@type {Task}*/
+  tasks: new Task ({ data: { completed: '${this.completed}', description: '${this.description}', id: '${this.id}'} } ),
+    /**@type {Image}*/
+  image: new Image ({ url: '${this.url}'} )
+}
 
 /** Collection of listeners to be called based on keyed state changes
  * @type {{[x:string]: function[]}}
@@ -18,6 +21,7 @@ let _listeners = {
   weather: [],
   quotes: [],
   tasks: [],
+  image: [],
 };
 
 /**
